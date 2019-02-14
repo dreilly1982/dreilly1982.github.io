@@ -18,7 +18,9 @@ function pickOne() {
     }
     index--;
     let bird = savedBirds[index];
-    //console.log(bird.fitness);
+    if (bird.fitness > bestBird.fitness) {
+        bestBird = bird;
+    }
     let child = new Bird(bird.brain);
     child.mutate();
     return child;

@@ -11,7 +11,7 @@ class Bird {
         if (brain) {
             this.brain = brain.copy();
         } else {
-            this.brain = new NeuralNetwork(5, 10, 2);
+            this.brain = new NeuralNetwork(5, 8, 2);
         }
 
         var randNum = Math.floor(Math.random()*3);
@@ -103,6 +103,7 @@ class Bird {
 
             let output = this.brain.predict(inputs);
             if (output[1] > output[0]) {
+            // if (output[0] > .5) {
                 this.up();
             }
         }

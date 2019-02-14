@@ -43,6 +43,17 @@ class Matrix {
     return arr;
   }
 
+  toArray2() {
+    let arr = [];
+    for (let i = 0; i < this.rows; i++) {
+      arr.push([]);
+      for (let j = 0; j < this.cols; j++) {
+        arr[i].push(this.data[i][j]);
+      }
+    }
+    return arr;
+  }
+
   randomize() {
     return this.map(e => Math.random() * 2 - 1);
   }
